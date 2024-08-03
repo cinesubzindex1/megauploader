@@ -7,9 +7,9 @@ const fs = require('fs');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// MEGA credentials (replace with your own)
-const email = 'your-email@example.com';
-const password = 'your-password';
+// MEGA credentials from environment variables
+const email = process.env.MEGA_EMAIL;
+const password = process.env.MEGA_PASSWORD;
 
 // Set up multer for file uploads
 const upload = multer({ dest: 'uploads/' });
